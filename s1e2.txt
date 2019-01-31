@@ -23,4 +23,6 @@ some text
 
 
 
-There is text (and add text hotfixnew) from Mater Tree
+<div id="footer">
+ please contact us at support@github.com
+</div>

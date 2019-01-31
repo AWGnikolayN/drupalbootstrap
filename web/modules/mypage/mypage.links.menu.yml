@@ -1,0 +1,7 @@
+mypage.view:
+  #Заголовок
+  title: 'Add content for mypage'
+  #Системное название меню
+  parent: system.admin
+  #Название роута.
+  route_name: mypage.add_record

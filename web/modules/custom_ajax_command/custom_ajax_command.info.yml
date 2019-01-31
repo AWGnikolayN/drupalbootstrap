@@ -1,0 +1,6 @@
+name: 'Custom Ajax Command'
+description: 'Простая реализация кастомной Ajax команды'
+core: 8.x
+type: module
+package: 'Other'
+version: '8.x-1.0'

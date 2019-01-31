@@ -1,0 +1,15 @@
+services:
+  mypage.db_logic: # Название сервиса.
+#     Класс который возвращает сервис.
+#     Так как в Drupal 8 используется автозагрузчик PSR-4 то src пропускаем.
+    class: Drupal\mypage\MyPageDbLogic
+    # Аргументы которые прилетят в конструктор класса.
+    arguments: ['@database']
+    tags:
+      - { name: backend_overridable }
+  mypage.db_logic_from_admin: # Название сервиса.
+#     Класс который возвращает сервис.
+#     Так как в Drupal 8 используется автозагрузчик PSR-4 то src пропускаем.
+    class: Drupal\mypage\MyPageDbLogicFromAdmin
+    # Аргументы которые прилетят в конструктор класса.
+    arguments: ['@database']

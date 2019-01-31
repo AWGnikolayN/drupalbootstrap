@@ -1,0 +1,5 @@
+drupaltext:
+  version: VERSION
+  css:
+    theme:
+      css/drupaltext.css: { }

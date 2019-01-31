@@ -1,0 +1,5 @@
+name: DrupalForm
+description: Custom module for output Form
+type: module
+core: 8.x
+package: DrupalForm

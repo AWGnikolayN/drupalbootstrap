@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK()
+ */
+function drupaltext_preprocess_block(&$variables) {
+
+  if ($variables['plugin_id'] == 'drupaltext_first_block_block') {
+
+      //$variables['elements']['#attached']['library'][] = 'drupaltext/drupaltext';
+
+      $variables['#attached']['library'][] = 'drupaltext/drupaltext';
+  }
+}

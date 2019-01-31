@@ -1,0 +1,7 @@
+custom_ajax_command.routing:
+  path: '/custom_ajax_command'
+  defaults:
+    _title: 'Custom Ajax Command'
+    _controller: '\Drupal\custom_ajax_command\Controller\CustomAjaxCommandController::customAjaxCommandAlert'
+  requirements:
+    _permission: 'access content'

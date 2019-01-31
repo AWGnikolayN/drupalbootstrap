@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @param $variables
+ * Implements hook_preprocess_page()
+ */
+function custom_ajax_command_preprocess_page(&$variables){
+
+  $variables['#attached']['library'][] =  'custom_ajax_command/custom_ajax_command';
+
+  # Add libraries for anonymous
+  $logged_in = \Drupal::currentUser()->isAuthenticated();
+  if(!$logged_in){
+    $libraries['#attached']['library'][] = 'core/drupal.ajax';
+  }
+
+  render($libraries);
+
+}

@@ -1,0 +1,5 @@
+name: Example create administration page
+description: Данный модуль показывает процесс создания страниц администрирования
+core: 8.x
+package: Drupalfly
+type: module

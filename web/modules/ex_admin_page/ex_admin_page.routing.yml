@@ -1,0 +1,26 @@
+# Page list
+ex_admin_page.list:
+  path: '/admin/config/services/ex_admin_page_list'
+  defaults:
+    _title: 'Page with a list'
+    _controller: '\Drupal\ex_admin_page\Controller\ExAdminPageController::ex_page_list'
+  requirements:
+    _permission: 'administer site configuration'
+
+# Page list
+ex_admin_page.list_edit:
+  path: '/admin/config/services/ex_admin_page_list_edit'
+  defaults:
+    _title: 'Page with a list (editing)'
+    _controller: '\Drupal\ex_admin_page\Controller\ExAdminPageController::ex_page_list_edit'
+  requirements:
+    _permission: 'administer site configuration'
+
+# Page settings
+ex_admin_page.settings:
+  path: '/admin/config/services/ex_admin_page_settings'
+  defaults:
+    _title: 'Page with a settings'
+    _controller: '\Drupal\ex_admin_page\Controller\ExAdminPageController::ex_page_settings'
+  requirements:
+    _permission: 'administer site configuration'

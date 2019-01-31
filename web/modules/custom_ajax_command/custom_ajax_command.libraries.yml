@@ -1,0 +1,11 @@
+# Libraries for Custom Ajax command
+custom_ajax_command:
+  version: VERSION
+  js:
+    # Add JS files
+    js/custom_ajax_command.js: {}
+  dependencies:
+    - core/drupal.ajax
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

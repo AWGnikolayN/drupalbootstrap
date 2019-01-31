@@ -1,0 +1,23 @@
+ex_admin_page.list:
+  title: List
+  route_name : ex_admin_page.list
+  base_route: ex_admin_page.list
+  weight: 10
+
+ex_admin_page.list_children:
+  title: List (View)
+  parent_id: ex_admin_page.list
+  route_name : ex_admin_page.list
+  weight: 1
+
+ex_admin_page.list_children_sub:
+  title: List (Editing)
+  parent_id: ex_admin_page.list
+  route_name : ex_admin_page.list_edit
+  weight: 2
+
+ex_admin_page.settinigs:
+  title: Settings
+  route_name: ex_admin_page.settings
+  base_route: ex_admin_page.list
+  weight: 20

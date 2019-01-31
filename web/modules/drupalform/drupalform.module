@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function drupalform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id == 'custom_form_in_block') {
+    $form['employee_name']['#attributes']['placeholder'] = 'My hook, You name';
+    $form['employee_mail']['#attributes']['placeholder'] = 'My hook, You email';
+
+    $form['#validate'][] = 'drupalform_settings_validate';
+    $form['#submit'][] = 'drupalform_settings_submit';
+  }
+}
+
+/**
+ * Custom validation callback.
+ */
+function drupalform_settings_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  if(strlen($form_state->getValue('employee_name')) < 5){
+    $form_state->setErrorByName('employee_name', t('You count characters in field  Name: '.strlen($form_state->getValue('employee_name')).'. The count of characters must not be less than 5'));
+  }
+}
+
+/**
+ * Custom submit callback.
+ */
+function drupalform_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // drupal_set_message is deprecated
+  // drupal_set_message(t('An error occurred and processing did not complete.'));
+
+  \Drupal::messenger()->addStatus(
+    t(htmlentities("User Name " . $form_state->getValue('employee_name')))
+  );
+}

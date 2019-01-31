@@ -1,0 +1,33 @@
+#Название роутинга, его используют для генерации ссылок, редирект и так далее.
+mypage.add_record:
+  #Путь который будет на сайте.
+  path: '/admin/mypage/add_record'
+  defaults:
+  #Заголовок страницы
+    _title: 'Add record'
+    #Отображение на странице формы. Аналог drupal_get_form
+    _form: '\Drupal\mypage\Form\ConfigFormMyPage'
+  requirements:
+  #Права
+    _permission: 'access simple page'
+
+mypage.view:
+  path: '/mypage/{mypage_id}'
+  defaults:
+    _title: 'My page'
+    #page callback. Метод который рендерит нашу страницу.
+    _controller: '\Drupal\mypage\Controller\MyPageController::content'
+  requirements:
+    _permission: 'view content'
+    #Можно использовать регулярку для коректности сожержимого аргумента.
+    #В данном случае будут доступны в переменной mypage_id только целые числа иначе 404.
+    mypage_id: \d+
+
+mypage.all:
+  path: '/mypage'
+  defaults:
+    _title: 'Page views all'
+    #page callback. Метод который рендерит нашу страницу.
+    _controller: '\Drupal\mypage\Controller\MyPageController::all'
+  requirements:
+    _permission: 'view content'

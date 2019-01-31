@@ -1,0 +1,7 @@
+helloworld:
+  version: 1.x
+  js:
+    js/script.js: {}
+  # Так как наш скрипт использует jQuery, мы устанавливаем зависимость/
+  dependencies:
+    - core/jquery

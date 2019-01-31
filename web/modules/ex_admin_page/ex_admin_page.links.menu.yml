@@ -1,0 +1,6 @@
+ex_admin_page.config:
+  title: 'Page with a list'
+  description: 'Page with a list'
+  parent: system.admin_config_services
+  route_name: ex_admin_page.list
+  weight: 10

@@ -23,4 +23,4 @@ some text
 
 
 
-There is text (and add text hotfixnew) from Mater Tree
+<div id="footer">contact : email.support@github.com</div>
